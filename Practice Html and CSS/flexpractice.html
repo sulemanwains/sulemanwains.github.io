@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing Footer with Flex</title>
+
+<style>
+
+body{
+    display: flex;
+    background-color: black;
+
+}
+
+#footer{
+    width: 90%;
+    height: 70vh;
+    margin: 10%;
+    background-color: black;
+}
+
+#upper{
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+#about{
+
+width: 30%;
+color: white;
+margin-left: 5%;
+}
+
+#news{
+  
+    width: 30%;
+    color: white;
+    margin-left: 5%;
+}
+
+#insta{
+    
+    width: 30%;
+    color: white;
+    margin-left: 5%;
+}
+#emailid{
+    border-radius: 20px;
+}
+#send{
+    
+    border-radius: 20px;
+    background-color: orange;
+}
+#img1{
+
+width: 40%;
+height: 100px;
+background-color: orange;
+}
+#img2{
+
+width: 40%;
+margin-left: 10px;
+background-color: red;
+}
+#img3{
+
+width: 40%;
+margin-top: 10px;
+height: 100px;
+background-color: green;
+}
+#img4{
+
+width: 40%;
+margin-left: 10px;
+margin-top: 10px;
+background-color: blue;
+}
+li{
+    margin-left: 10%;
+    color: white;
+    font-weight: bold;
+}
+#brand{
+    margin-left: 100%;
+}
+#tweets{
+    color: darkgray;
+}
+#about>p{
+    color: darkgray;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div id="footer">
+
+    <div id="upper">
+
+        <div id="about">
+         <h3>About Us</h3>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quae blanditiis impedit in esse porro tempora, incidunt commodi odio ex numquam, neque corporis culpa illo nostrum, cum nemo ipsa fugiat.</p>
+         <br>
+         <p id="phone" style="color: white;"> Phone: +1 641 819 2235</p>
+         <p id="email" style="color: white;"> Email: suleman.venus2@gmail.com</p>
+         <input type="text" name="email" id="emailid" placeholder="enter your email"><button type="submit" id="send">Send</button>
+        </div>
+
+        <div id="news">
+         <h3> Latest News</h3>
+         <div id="tweets">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a dolorem commodi architecto voluptas nemo, dolorum debitis consequuntur soluta possimus.</p>
+            
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a dolorem commodi architecto voluptas nemo, dolorum debitis consequuntur soluta possimus.</p>
+            
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a dolorem commodi architecto voluptas nemo, dolorum debitis consequuntur soluta possimus.</p>
+         </div>
+         </div>
+
+        <div id="insta">
+         <h3 style="display:flex; flex-direction: row;">Instagram</h3>
+         
+         <div id="row1" style="display:flex; flex-direction: row;">
+            <div id="img1">
+                image1
+            </div>
+            <div id="img2">
+               image2
+           </div>
+         </div>
+
+         <div id="row2" style="display:flex; flex-direction: row;">
+            <div id="img3">
+                image3
+            </div>
+            <div id="img4">
+                image4
+            </div>
+
+         </div>
+         </div>
+
+    </div>
+
+    <div id="lower" style="margin-top: 50px; width: 100%;">
+    <hr>
+    </div>
+
+    <div id="lower1" style="display: flex; flex-direction: row;">
+       <ul style="display: flex; list-style: none;">
+           <li>Home</li>
+           <li>About</li>
+           <li id="work">Our Work</li>
+           <li>Services</li>
+           <li>Blog</li>
+           <li>Contracts</li>
+           <li id="brand">Colorlib</li>
+         </ul>
+    
+    </div>
+    
+
+    
+
+</div>
+
+
+    
+</body>
+</html>

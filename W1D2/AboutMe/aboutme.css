@@ -1,0 +1,69 @@
+body{
+    background-color: #41b3a3;
+    color: azure;
+}
+img{
+    height: 300px;
+}
+div{
+    padding: 5px 0px 5px 10px;
+}
+.imgHappyWidth{
+    width: 300px;
+}
+.imgSadWidth{
+    width: 400px;
+}
+div h2{
+    text-transform: capitalize;
+}
+h1{
+    text-transform: capitalize;
+}
+.validatorimg{
+    width: 200px;
+    height: 150px;
+}
+strong{
+    color: rgb(163, 7, 59);
+    font-style: italic;
+}
+abbr:hover{
+    color: #3c09f3;
+}
+#course{
+    background-color: #58b1ec;
+    color: black;
+    line-height: 30px;
+}
+#course:hover{
+    background-color: #f5af60;
+    color: rgb(190, 54, 54);
+}
+#myFontStyle1{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+#myFontStyle2{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(134, 243, 113);
+    text-decoration: underline;
+}
+p::first-letter{
+font-size: 1.5em;
+}
+li{
+   
+    color: #000000;
+    line-height: 30px;
+}

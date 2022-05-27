@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+
+
+    <style>
+        body{
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        #cover{
+           
+            height: 200px;
+
+        }
+
+        #nav{
+            display: flex;
+            background-color: yellow;
+
+        }
+
+        #timer{
+            text-align: center;
+            font-weight: bold;
+            font-size: 200%;
+
+        }
+
+        #secondflex{
+            display: flex;
+            height:330px;
+        }
+
+        #sidebar{
+            width: 30%;
+            background-color: rgb(234, 238, 148);
+            margin-right: 30px;
+        
+        }
+
+        #textboxes{
+            width: 80%;
+            background-color: blue;
+            margin-left: 30px;
+        }
+
+        #nav>ul{
+            display: flex;
+            margin-left: 500px;
+            flex-direction: row;
+        }
+
+        #nav>ul>li{
+            margin-left: 50px;
+            font-weight: bold;
+            list-style: none;
+            
+        }
+
+        #nav>ul>li:hover{
+            background-color: blue;
+
+        }
+        
+        #textoverlay{
+        margin-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 650px;
+        color: white;
+    }
+
+    #textlap{
+        
+        margin: 40px;
+    }
+        
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="header">
+
+        <img src="./header.jpg" alt="Header Image" style="width:100%; height: 100px;">
+    
+    <div id="textoverlay">
+       <p id="textlap">
+        Here is Header
+       </p>
+    </div>
+    </div>
+
+    <div id="cover">
+
+        <img src="./slideshow.jpg" alt="slideshow Image" style="height:100%; width:100%">
+
+        <p> Cover Image Goes here </p>
+    </div>
+
+    <div id="nav">
+
+        <ul>
+            <li>
+                Home
+            </li>
+
+            <li>
+                About Us
+            </li>
+
+            <li>
+                Gallery
+            </li>
+
+            <li>
+                Blog
+            </li>
+
+            <li>
+                Contact Us
+            </li>
+        </ul>
+        
+    </div>
+
+    <div id="timer">
+        <p>
+            09
+            <br>
+            <input type="button" style="height:40px;" value="Start Timer by Clicking">
+        </p>
+    </div>
+
+    <div id="secondflex">
+
+        <div id="sidebar" style="padding-top: 50px;">
+
+            <ul>
+                Hello
+                <li>
+                    Hi
+                </li>
+                <li>
+                    Hey
+                </li>
+            </ul>
+
+            <ul>
+                Pakistan
+                <li>
+                India
+                </li>
+                <li>
+                Bangldesh
+                </li>
+            </ul>
+
+            <ul>
+                Hello
+                <li>
+                    Hi
+                </li>
+                <li>
+                    Hey
+                </li>
+            </ul>
+    
+        </div>
+    
+        <div id="textboxes">
+    
+            <input type="text" name="username" id="user" placeholder="Username" style="margin-top:150px; margin-left:150px;">
+            <br>
+            <br>
+            <input type="password" name="password" id="pswd" placeholder="Your Password" style="margin-left:150px;">
+            <br>
+            <br>
+            <button type="submit" style="margin-left:200px;"> Submit </button>
+    
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>
