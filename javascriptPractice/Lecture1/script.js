@@ -1,4 +1,4 @@
-let a=["apple", "banana", "pear"];
+// let a=["apple", "banana", "pear"];
 
 // let result=[];
 
