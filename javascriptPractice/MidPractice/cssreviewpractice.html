@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Review Practice about Flex/Grid/Grid Wraps/floats and Positioning</title>
+
+    <style>
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    
+}
+
+#sidebar{
+  
+    background-color: lightgrey;
+    margin-right: 5%;
+  
+}
+
+#main-right{
+    
+    margin-left: 3%;
+    
+}
+
+header{
+    background-color: lightpink;
+    padding: 20px;
+}
+
+#upper-text{
+
+    display: flex;
+  
+}
+
+#line{
+    border-left: 2px solid lightgrey; 
+    height: 100px;
+}
+
+#content{
+    padding: 2%;
+}
+
+/* #table{
+    display: flex;
+    flex-direction: row;
+} */
+
+#table{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+}
+#main-img{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    
+    margin-top: 2%;
+}
+
+#img-left{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    
+    margin-right: 5%;
+    
+}
+
+#img-right{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    
+    margin-left: 5%;
+}
+
+#last-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+#content-left{
+    margin-right: 5%;
+}
+
+#content-right{
+    margin-left: 5%;
+}
+
+
+
+</style>
+
+</head>
+<body>
+    
+    <div id="main">
+    
+        <div id="sidebar">
+
+            <h2 style="margin-left: 7%;"> Some Favorites</h2>
+            <ul>
+                <li> Cooking oil</li>
+                <li> Soda water</li>
+                <li> Namkeen Pakora</li>
+            </ul>
+
+
+        </div>
+
+    <div id="main-right">
+
+            <header>There is some text for header</header>
+
+            <h1> Wild & Wacky Vegetables</h1>
+        <div id="upper-text">
+            <div id="line"> </div>
+            <div id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod, sint, nemo quae deserunt aliquam explicabo quibusdam ipsam, nostrum debitis assumenda saepe cupiditate maxime mollitia dolor quo soluta veritatis illum quidem eveniet! Inventore dolorem possimus vitae natus. Rerum, est magni?</div>
+         </div>
+        
+        <h2> Some Diseases</h2>
+
+     <div id="table">
+        <table style="border: 1px solid black;">
+            <th style="border: 1px solid black;">Pakistan</th>
+            
+
+            <tr > 
+            <td style="border: 1px solid black;"> Pakistan Super League</td>
+            </tr>
+            <tr><td style="border: 1px solid black;"> Pakistan Cricket Team</td></tr>
+            <tr> <td style="border: 1px solid black;"> Pakistan Hockey team</td></tr>
+        </table>
+
+        <table style="border: 1px solid black;">
+            
+            <th style="border: 1px solid black;">India</th>
+
+            <tr> 
+            <td style="border: 1px solid black;">Indian Premier league</td>
+            </tr>
+
+            <tr><td style="border: 1px solid black;"> Indian Cricket Team</td></tr>
+            <tr> <td style="border: 1px solid black;"> Indian Hockey team</td></tr>
+
+        </table>
+      </div>
+
+
+       <div id="main-img">
+
+           <div id="img-left">
+               
+               <div>
+                   <img style="width: 200px; height: 100px; border: 2px solid lightgrey; " src="../MidPractice/../../Practice_Html_CSS/slideshow.jpg" alt="">
+
+               </div>
+
+               <div>
+                <img style="width: 250px; height: 110px; border: 2px solid lightgrey; " src="../../Practice_Html_CSS/header.jpg" alt="">
+
+               </div>
+
+           </div>
+
+
+          <div id="img-right">
+
+            <div>
+                <img style="width: 200px; height: 120px; border: 2px solid lightgrey; " src="../MidPractice/../../Practice_Html_CSS/slideshow.jpg" alt="">
+
+            </div>
+
+            <div>
+                <img style="width: 250px; height: 130px; border: 2px solid lightgrey; " src="../../Practice_Html_CSS/header.jpg" alt="">
+
+            </div>
+
+          </div>
+         
+       </div>
+
+       <h1>Really Informative Info</h1>
+       <div id="last-content">
+
+             <div id="content-left">
+
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim neque nisi ducimus veritatis beatae perspiciatis assumenda dignissimos adipisci tempora quam aspernatur labore reprehenderit consequuntur eos ex, esse harum cumque libero veniam. Debitis consequatur saepe expedita omnis magnam culpa laudantium hic!
+             </div>
+
+            <div id="content-right">
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic magnam consectetur, quasi dolorum nulla distinctio dolor tenetur. Ratione, omnis iste doloremque qui ullam quibusdam veritatis consequuntur reprehenderit eos, magnam et libero nesciunt, corporis inventore dignissimos ducimus rem voluptates sit.
+             </div>
+
+        </div>
+       
+
+    </div>
+
+
+
+    </div>
+</body>
+</html>
