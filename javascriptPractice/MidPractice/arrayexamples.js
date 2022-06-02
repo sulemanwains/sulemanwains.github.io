@@ -69,13 +69,9 @@ console.log(contactArray);
 
 
 
-
 let finalArray={};
-
 contactArray.forEach((element, index) =>{
-
 finalArray[element]=array2[index];
-
 });
 
 console.log(finalArray);
@@ -87,8 +83,11 @@ console.log(finalArray);
 // Not Sure how to do it
 let oddNum1=numbers.filter(a => a%2!=0);
 
+oddNum1.find(oddNum1[0]);
+
 
 // 7. Convert string to array and array to string. don’t use split() and
 // toString()
+//"Here goes the string"
 
 // Not Sure how to do this as well

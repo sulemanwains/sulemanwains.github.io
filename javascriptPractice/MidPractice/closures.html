@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+
+ function wrapper(colorName){
+ return function show(){
+ this.style.color = colorName;
+ }}
+
+ function forInterval(){
+
+    $("#btn1").hide();
+ }
+
+function forshow(){
+
+ $("#btn1").show();
+}
+
+ function toggle(){
+    let show=true;
+    return function displayToggle(){
+        
+        if(show){
+            setInterval(forInterval, 2000);
+            show=false;
+        }
+        else{
+            setInterval(forshow, 2000);
+            show=true;
+        }
+    }
+ }
+
+
+ 
+ $(function(){
+//  $('#btn1').click(wrapper("red"));
+//  $('#btn2').click(wrapper("yellow"));
+
+ $('#btn2').click(toggle());
+ $("#inputField").click(wrapper("green"));
+ })
+
+
+//  function remove1() {
+
+//     if($("#btn2").css("display")=="none")
+// $("#btn2").css("display", "inline");
+
+// else{
+//     $("#btn2").css("display", "none");
+// }
+
+// }
+
+
+
+
+// $(function () {
+// $('#btn1').click(remove1);
+
+// })
+ 
+ 
+</script>
+<body>
+ 
+ <button id="btn1">Test</button>
+ <button id="btn2">TOggle</button>
+ <!-- <input type="text" id ="inputField"/> -->
+
+ <!-- <button id="btn1">Button1</button>
+
+ <button id="btn2">Button2</button> -->
+
+</body>
+</html>
