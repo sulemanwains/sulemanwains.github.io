@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+
+            // let array = ["Apple", "banana", "Orange"];
+
+            // let ultag = document.createElement("ul");
+
+            // for (i = 0; i < array.length; i++) {
+            //     let litag = document.createElement("li");
+            //     litag.innerHTML = array[i];
+            //     ultag.append(litag);
+            // }
+            // document.body.append(ultag)
+
+
+            let objArray = [{name: "Apple", code: "ap"}, {name:"banana", code:"bn" }, {name:"Orange", code: "or" }];
+
+            let selectElement=document.createElement("select");
+
+            for (i = 0; i < objArray.length; i++) {
+                let opt1 = document.createElement("option");
+                opt1.setAttribute("name", objArray[i].name);
+                opt1.setAttribute("value", objArray[i].code);
+                opt1.innerHTML=objArray[i].name;
+                selectElement.append(opt1);
+            }
+
+            document.body.append(selectElement);
+
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+<!-- <select name="selectbox" id="selectboxid">
+
+    <option value="Apple"> op </option>
+    
+
+</select> -->
+
+</html>
