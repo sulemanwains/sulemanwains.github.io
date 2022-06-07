@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Practice</title>
+</head>
+
+<style>
+
+body{
+    background-color: rgb(246, 224, 196);
+}
+
+#header h1{
+    text-align: center;
+    font-size: 80px;
+    color: white;
+}
+
+#header p{
+
+    text-align: center;
+    color: rgb(62, 59, 59);
+}
+
+hr{
+    margin-left: 15%;
+    margin-right: 20%;
+    color: black;
+}
+
+#nav-bar{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 25%;
+    gap: 12%;
+    /* border: solid 2px black; */
+}
+
+#insideH1{
+    margin-top: 5%;
+    margin-left: 15%;
+    color: rgb(62, 59, 59);
+}
+
+#main-img{
+    display: flex;
+    margin-left: 15%;
+    margin-right: 20%;
+    gap: 10%;
+    height:200px;
+
+}
+
+#left-img{
+
+    display: flex;
+    gap: 10%;
+    border: solid 8px white; 
+    height:200px;
+    width: 50%;
+}
+
+#right-img{
+display: flex;
+gap: 10%;
+border: solid 8px white; 
+height:200px;
+width: 50%;
+}
+
+img{
+    width: 100%;
+}
+
+#footer{
+    display: flex;
+    margin-left: 15%;
+    margin-right: 20%;
+    gap: 10%;
+}
+
+#left-footer{
+/* display: flex; */
+
+width: 50%;
+}
+
+#right-footer{
+/* display: flex; */
+width: 50%;
+}
+
+#p2{
+  /* margin-left: 60%; */
+  float: right;
+}
+
+#p4{
+    margin-left: 70%;
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+
+    body{
+        background-color: aquamarine;
+    }
+
+}
+
+
+
+</style>
+
+<body>
+
+    <div id="header">
+        <header> <h1> TypeWolf</h1>
+        <p> What's Trending in Type</p>
+        </header>
+
+    </div>
+
+    <hr>
+
+    <div id="nav-bar">
+
+        <div id="first">
+
+            First
+        </div>
+
+        <div id="second">
+
+            Second
+        </div>
+
+        <div id="third">
+
+            Third
+        </div>
+
+        <div id="fourth">
+
+            Fourth
+        </div>
+
+        <div id="fifth">
+
+            Fifth
+        </div>
+
+        <div id="sixth">
+
+            Sixth
+        </div>
+
+    </div>
+
+    <h1 id="insideH1"> Site of the Day</h1>
+
+    <div id="main-img">
+
+        <div id="left-img">
+
+            <img src="./header.jpg" alt="">
+
+            
+
+        </div>
+
+        <div id="right-img">
+
+            <img src="../../Practice_Html_CSS/slideshow.jpg" alt="">
+
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+
+        <div id="left-footer">
+
+        <br>
+        <p  style="display: inline;"> Wade & Leta</p> <p style="display: inline;" id="p2"> AUG, 2009 </p>
+        <br>
+        <p> Fonts - sohne </p>
+
+        </div>
+
+        <div id="right-footer">
+
+        <br>
+        <p style="display: inline;"> Squad</p> <p style="display: inline;" id="p4"> JUL, 2009</p>
+        <br>
+        <p> Fonts - Dunk </p>
+
+        </div>
+        
+
+    </div>
+
+    
+</body>
+</html>

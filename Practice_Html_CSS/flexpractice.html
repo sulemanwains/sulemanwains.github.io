@@ -96,6 +96,41 @@ li{
     color: darkgray;
 }
 
+#lower1{
+    display: flex; 
+    flex-direction: row;
+}
+
+#lower1 ul{
+    display: flex; 
+    list-style: none;
+}
+
+@media screen and (max-width: 600px){
+
+    #lower1{
+    display: flex; 
+    flex-direction: column;
+    /* flex-direction: row; */
+}
+
+#lower1 ul{
+    display: flex; 
+    flex-direction: column;
+    list-style: none;
+}
+
+#insta{
+    
+    width: 100%;
+    color: white;
+    margin-left: 5%;
+}
+#img1, #img2, #img3, #img4{
+    width: 100%;
+}
+
+}
 
 </style>
 
@@ -155,8 +190,9 @@ li{
     <hr>
     </div>
 
-    <div id="lower1" style="display: flex; flex-direction: row;">
-       <ul style="display: flex; list-style: none;">
+    <div id="lower1">
+       
+        <ul>
            <li>Home</li>
            <li>About</li>
            <li id="work">Our Work</li>

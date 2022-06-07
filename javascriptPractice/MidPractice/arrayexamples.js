@@ -91,3 +91,39 @@ oddNum1.find(oddNum1[0]);
 //"Here goes the string"
 
 // Not Sure how to do this as well
+
+
+// Array to String
+
+let array2= [50,"apple",{a:1}];
+
+let string1="";
+
+for(i=0; i<array2.length; i++){
+    string1+=array2[i] + " ";
+}
+
+console.log(string1);
+
+
+
+// String to Array
+
+let arr1=[];
+
+for(i=0; i<string1.length; i++){
+
+    let a=string1.charAt(i);
+
+    arr1[i].push(a);
+}
+console.log(arr1);
+
+
+
+
+
+
+
+
+

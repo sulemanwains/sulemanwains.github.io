@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+
+            let array = ["Apple", "banana", "Orange"];
+
+            function makelist(array) {
+
+                let ultag = document.createElement("ul");
+
+                for (i = 0; i < array.length; i++) {
+                    let litag = document.createElement("li");
+                    litag.innerHTML = array[i];
+                    ultag.append(litag);
+                }
+                document.body.append(ultag)
+            }
+
+            makelist(array);
+
+
+            let objArray = [{ name: "banana", code: "bn", price: 20 }, { name: "apple", code: "ap", price: 24 }, { name: "orange", code: "or", price: 15 }];
+
+            function selectElement(objArray) {
+
+                let selectElement = document.createElement("select");
+
+                for (i = 0; i < objArray.length; i++) {
+                    let opt1 = document.createElement("option");
+                    opt1.setAttribute("name", objArray[i].name);
+                    opt1.setAttribute("value", objArray[i].code);
+                    opt1.innerHTML = objArray[i].name;
+                    selectElement.append(opt1);
+                }
+                document.body.append(selectElement);
+            }
+            selectElement(objArray);
+
+
+
+            let createNewDiv = document.createElement("div");
+
+            createNewDiv.setAttribute("id", "newdiv");
+            document.body.append(createNewDiv);
+
+            function createTable(objArray) {
+
+                let createTable = "<table>";
+
+                createTable += "<tr>";
+                for (let key in objArray[0]) {
+
+                    createTable += "<th>" + key + "</th>";
+                }
+                createTable += "</tr>";
+
+                for (let item of objArray) {
+                    createTable += "<tr>";
+                    for (let val in item) {
+                        createTable += "<td>" + item[val] + "</td>";
+                    }
+                    createTable += "</tr>";
+                }
+
+                createTable += "</table>";
+
+                // document.body.innerHTML=createTable;
+                // createNewDiv.innerHTML = createTable;
+
+                let createBtn1 = document.createElement("input")
+                createBtn1.setAttribute("type", "button")
+                createBtn1.setAttribute("id", "sort-by-price")
+                createBtn1.setAttribute("value", "Sort By Price")
+                $("#newdiv").prepend(createBtn1);
+
+                let createBtn2 = document.createElement("input")
+                createBtn2.setAttribute("type", "button")
+                createBtn2.setAttribute("id", "sort-by-name")
+                createBtn2.setAttribute("value", "Sort By Name")
+                $("#newdiv").prepend(createBtn2);
+            }
+
+            createTable(objArray);
+
+
+            $("#sort-by-price").click(() => {
+
+                objArray.sort((a, b) => a.price - b.price);
+                createTable(objArray);
+            });
+
+            $("#sort-by-name").click(() => {
+
+                objArray.sort((a, b) => {
+                    if (a.name < b.name) return -1;
+                    if (a.name > b.name) return 1;
+                    return 0;
+                });
+                createTable(objArray);
+            });
+
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <!-- <input type="button" id="sort-by-age" value="Sort By Age">
+
+    <input type="button" id="sort-by-name" value="Sort By Name"> -->
+
+
+</body>
+
+<!-- <select name="selectbox" id="selectboxid">
+
+    <option value="Apple"> op </option>
+    
+
+</select> -->
+
+<!-- 
+<table>
+    <tr> <th> Pakistan</th> <th> India </th> <th> Bangladesh </th></tr>
+    <tr><td> PSL</td> <td> IPL</td> <td> BPL</td></tr>
+    <tr><td> Cricket</td> <td> Hockey</td> <td> Football</td></tr>
+    <tr><td> Army</td> <td> Politics</td> <td> Democratic</td></tr>    
+</table> -->
+
+
+
+</html>

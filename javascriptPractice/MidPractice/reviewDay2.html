@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<script>
+
+    $(function () {
+
+        // Creating a simple div first
+        let creatediv=document.createElement("div");
+        creatediv.setAttribute("id", "firstDiv");
+        document.body.prepend(creatediv);
+
+        // Creating a form First
+        let createForm=document.createElement("form");
+        createForm.setAttribute("id", "form1");
+        creatediv.prepend(createForm);
+
+
+
+        // Creating First Text Input
+
+        let label1="<label>";
+        label1+="First Input: ";
+        label1+="</label1>";
+        $(createForm).html(label1);
+
+        let createTextBox1 = document.createElement("input");
+        createTextBox1.setAttribute("type", "text");
+        createTextBox1.setAttribute("name", "textbox1");
+        createTextBox1.setAttribute("id", "text1");
+        createForm.append(createTextBox1);
+   
+
+        // Creating LineSpace After First Text Box
+        let enterLine=document.createElement("br");
+        createTextBox1.after(enterLine);
+
+
+       // Creating Second Text Input
+
+        let createLabel2=document.createElement("label");
+        createLabel2.innerHTML="Second Input: ";
+
+        let createTextBox2 = document.createElement("input");
+        $(createTextBox2).attr({ type: "text", name: "textbox2", id: "text2" });
+
+        enterLine.after(createLabel2);
+        createLabel2.after(createTextBox2);
+
+
+        // Creating Radio Buttons
+
+        let createHeading=document.createElement("h4");
+        createHeading.innerHTML="Radio Buttons: ";
+
+        let createRadio1=document.createElement("input");
+        $(createRadio1).attr({name: "radiobtn", type: "radio", id:"radio1", value: "Pakistan", class:"radios"});
+        createTextBox2.after(createHeading);
+        createHeading.after(createRadio1);
+        $(createRadio1).after($('<label id="label1" class="ival"> </label>').text("Pakistan"));
+
+
+        let createRadio2=document.createElement("input");
+        $(createRadio2).attr({name: "radiobtn", type: "radio", id:"radio2", value: "India", class:"radios"});
+        $("#label1").after(createRadio2);
+        $(createRadio2).after($('<label id="label2" class="ival"> </label>').text("India"));
+
+        
+        let createRadio3=document.createElement("input");
+        $(createRadio3).attr({name: "radiobtn", type: "radio", id:"radio3", value: "Bangladesh", class:"radios"});
+        $("#label2").after(createRadio3);
+        $(createRadio3).after($('<label id="label3" class="ival"> </label>').text("Bangladesh"));
+
+        // Creating CheckBoxes
+
+        let secondHeading=document.createElement("h4");
+        secondHeading.innerHTML="CheckBoxes: ";
+        $("#label3").after(secondHeading);
+
+
+        let check1=document.createElement("input");
+        $(check1).attr({name:"course", type:"checkbox", id:"wap1", value: "WAP", class: "chkbox"});
+        $(secondHeading).after(check1);
+        $(check1).after($('<label id="label4" class="ival"> </label>').text("WAP"));
+
+
+        let check2=document.createElement("input");
+        $(check2).attr({name:"course", type:"checkbox", id:"waa1", value: "WAA", class: "chkbox"});
+        $("#label4").after(check2);
+        $(check2).after($("<label id='label5' class='ival'> </label>").text("WAA"));
+
+        let check3=document.createElement("input");
+        $(check3).attr({name:"course", type:"checkbox", id:"mwa1", value: "MWA", class: "chkbox"});
+        $("#label5").after(check3);
+        $(check3).after($("<label id='label6' class='ival'> </label>").text("MWA"));
+
+
+        // Creating Select Boxes
+
+        let thirdHeading=document.createElement("h4");
+        thirdHeading.innerHTML="Select One Option: ";
+        $("#label6").after(thirdHeading);
+
+        let createSelect=document.createElement("select");
+        $(createSelect).attr({name: "selectBox", id: "select1"});
+        $(thirdHeading).after(createSelect);
+        $(createSelect).append($("<option value='Option1'> </option>").text("Option1"));
+        $(createSelect).append($("<option value='Option2'> </option>").text("Option2"));
+        $(createSelect).append($("<option value='Option3'> </option>").text("Option3"));
+        $(createSelect).append($("<option value='Option4'> </option>").text("Option4"));
+
+
+        // Creating TextArea for Message
+
+        let fourthHeading=document.createElement("h4");
+        fourthHeading.innerHTML="Your Message: ";
+        $(createSelect).after(fourthHeading);
+
+        let createTextArea=document.createElement("textarea");
+        $(createTextArea).attr({name:"textarea", id:"text-area1", cols:"30", rows:"10"});
+        $(fourthHeading).after(createTextArea);
+
+
+        // Creating a Submit Button
+
+        let createButton=document.createElement("button");
+        $(createButton).attr({type: "button", id: "btn"});
+        createButton.innerHTML="Show User's Input";
+        $(createTextArea).after(createButton);
+
+
+
+        // Main Functionaly After Clicking the Button
+
+        $("#btn").click(()=> {
+
+            const firstInput=$(createTextBox1).val();
+            $(createTextBox1).replaceWith("<span>" + firstInput + "</span>");
+
+            const secondinput=$(createTextBox2).val();
+            $(createTextBox2).replaceWith(secondinput);
+
+            const radio1Input=$(".radios:checked").val();
+            $(".radios").hide();
+            $(".ival").hide();
+            $(createRadio1).replaceWith(radio1Input);
+
+
+            const CheckBoxesInput=$(".chkbox:checked").val();
+            $(".chkbox").hide();
+            $(".chkbox:checked").replaceWith(CheckBoxesInput);
+
+            const dropDown=$("#select1").val();
+            $("#select1").replaceWith(dropDown);
+
+
+            const textAreaMsg=$(createTextArea).val();
+            $(createTextArea).replaceWith(textAreaMsg);
+
+            $("#btn").hide();
+
+
+
+        })
+
+
+    });
+
+</script>
+
+
+<body>
+    
+
+</body>
+
+
+
+</html>
