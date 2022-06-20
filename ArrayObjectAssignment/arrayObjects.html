@@ -23,6 +23,7 @@
                 arrObj.sort((a,b)=>a.Age-b.Age);
                 createTable(arrObj);
             });
+            
             $('#sort-by-name').click(()=>{
                 arrObj.sort((a,b)=>{
                     if(a.Name < b.Name) return -1;
